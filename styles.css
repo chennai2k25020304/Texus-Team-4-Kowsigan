@@ -1,0 +1,113 @@
+body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+        font-family: Arial, sans-serif;
+        color: wheat;
+    }
+
+    .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 6px solid transparent;
+        border-top: 6px solid #007BFF;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    .pulse {
+        width: 50px;
+        height: 50px;
+        background-color: #28a745;
+        border-radius: 50%;
+        animation: pulse 1.5s infinite;
+    }
+    .bounce {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .bounce div {
+        width: 15px;
+        height: 15px;
+        background-color: #ff5733;
+        border-radius: 50%;
+        animation: bounce 1.5s infinite ease-in-out;
+    }
+    
+    .bounce div:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    
+    .bounce div:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        background: rgb(20, 20, 20);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        border-color: #f4f4f4;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .flex-container:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.384);
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+    
+    .box {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+        transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+
+
+    .box:nth-child(2n) {
+        background-color: #3498db;
+    }
+
+    .box:nth-child(2n+1) {
+        background-color: #3498db;
+    }
+    .box:hover {
+        transform: scale(1.2);
+        background-color: #ff0000;
+    }    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.5); opacity: 0.6; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    
